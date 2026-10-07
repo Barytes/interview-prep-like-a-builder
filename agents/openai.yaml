@@ -1,0 +1,4 @@
+interface:
+  display_name: "Builder mindset 岗位教学"
+  short_description: "从战略、真实工作与前沿证据建立岗位模型，持续记录理解和贡献进展"
+  default_prompt: "使用 $builder-interview，结合已有学习状态，帮助我建立目标岗位的真实工作模型，并推进解释最新进展与参与前沿贡献的能力。"
