@@ -1,0 +1,28 @@
+{
+  "Code": 200,
+  "Data": {
+    "PostId": "2098252452842352640",
+    "RecruitPostId": 122481,
+    "RecruitPostName": "WorkBuddy-Agent Harness 研发工程师",
+    "LocationId": 1,
+    "LocationName": "深圳",
+    "BGId": 29294,
+    "BGName": "CSIG",
+    "ComCode": "",
+    "ComName": "",
+    "OuterPostTypeID": "",
+    "CategoryName": "",
+    "ProductName": "CSIG公共",
+    "Responsibility": "1.负责 WorkBuddy Harness 的整体效果与能力优化，协同内部团队，以用户真实任务表现为反馈，不断优化迭代 Harness 效果；岗位为研究和工程复合型，可以偏向其中一个方向，但需要对另一个方向有所了解，更倾向于两者兼顾；\r\n2.独立解决问题，提出原创性想法，从 0 到 1 驱动研究探索；同时拥有扎实的工程落地能力，打通从想法提出到落地实现的完整链路；\r\n3.可针对全新问题定义合理的评测与验证标准，搭建配套评测数据集；立足真实业务场景，保证智能体能力在现实环境下有效可用；\r\n4.包括但不限于以下研究方向：1）Harness Self‑Evolution 方向：研究 Harness 闭环自进化机制，自主迭代工具集、执行架构与多智能体协作范式，适配模型能力与业务场景演进；2）Context Engineering 方向：探索复杂场景下的上下文组织与编排，在模型窗口和 token efficiency 约束下引导模型聚焦关键信息，提升 Agent 任务表现；3）Multi‑Agent Coordination 方向：研究大规模分布式智能体协作，构建 Agent 集群化协作能力；4）Long‑term Memory 方向：研究 Agent 长期记忆、经验内化与自我迭代机制，形成稳定的行为模式与长期决策准则；5）Long‑Horizon 方向：研究长链路、稀疏反馈任务下的持续决策机制，降低长周期执行中的能力衰减；\r\n5.包括但不限于以下工程方向：1）Harness Self‑Evolution 方向：搭建 Agent 自进化 SDK 与平台，实现智能体自主迭代与持续能力升级；2）Context Engineering 方向：优化 Agent 上下文与提示工程，提升复杂场景下的适配能力与任务表现；3）Evaluation 方向：建设 Agent 多维度评测体系、数据集与基准，支撑 Agent 效果迭代和自进化。",
+    "Requirement": "1.计算机相关专业本科及以上学历；对 AI 行业有极大的热情；\r\n2.熟悉 LLM 与 Agent 的底层机制与技术原理，涵盖 Transformer、Model Inference、Prefix Cache、Programmatic Tool Calling、Context Compaction、Skills、MCP、Agent Memory、Multi-Agent 等；\r\n3.深度使用过一种或多种 Agent 工具，可借助 AI 工具快速学习陌生领域知识，敢于承接未知技术挑战；\r\n4.扎实编程与底层能力，熟练掌握 Rust/Go/C++ 等任一静态语言，具备高性能系统开发经验；\r\n5.既有研究品味，又能实践落地；技术上既有深度，也有广度；具备英文文献阅读能力。",
+    "LastUpdateTime": "2026年09月21日",
+    "PostURL": "http://careers.tencent.com/jobdesc.html?postId=2098252452842352640",
+    "SourceID": 1,
+    "IsCollect": false,
+    "PostLightItem": "1.聚焦 Agent 前沿方向，覆盖 Context Engineering、Harness Self-Evolution、Multi-Agent Coordination、Long-term Memory 与 Long-Horizon 等核心课题；\r\n2.兼具研究探索与工程落地空间，支持原创想法从问题定义、方案设计、效果评测到产品实现的完整闭环；\r\n3.面向真实业务场景和用户任务持续迭代，研究成果可直接应用于 WorkBuddy，产生可衡量的业务价值与用户影响；\r\n4.团队氛围开放进取，鼓励挑战未知的前沿问题，支持成员结合个人兴趣和专业能力深入探索；\r\n5.团队具有良好的研究氛围，会定期分享和讨论前沿课题、最新论文及实践经验，成员之间坦诚交流、紧密协作，共同解决有挑战性的技术问题。",
+    "ImportantItem": "1.在某个领域达到世界前沿水准；\r\n2.有含金量的科研成果或开源社区作品；\r\n3.有自己开发的 AI 工具或产品，能将 AI 融入自己的工作中；\r\n4.复合型人才，可以同时懂设计、产品甚至运营，不设边界。",
+    "Introduction": "在腾讯，技术人解决问题的激情永不熄灭。无论是面对产品、程序的问题，还是生活与人的问题，腾讯技术人都力图交出漂亮的答卷。我们善用科学工具，以强大的思维之力创造世界，为卓越的产品体验保驾护航，也为公司和产品策略提出宝贵的洞见，用技术引领新的变革。这里的每位成员，既传承着长久以来的务实文化，又时刻以创新眼光瞄准大海星辰。我们十分期待你加入这样一个「技术社区」，分享团队能量，尽情发挥所长。",
+    "DepartmentIntroduction": "",
+    "RequireWorkYearsName": "不限"
+  }
+}

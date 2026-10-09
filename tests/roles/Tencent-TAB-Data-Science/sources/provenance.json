@@ -1,0 +1,10 @@
+{
+  "official_url": "https://careers.tencent.com/jobdesc.html?postId=2075079122710867968",
+  "api_url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2075079122710867968&language=zh-cn",
+  "retrieved_on": "2026-09-09",
+  "last_update_original": "2026年07月09日",
+  "last_refresh_attempt": "2026-10-09",
+  "refresh_status": "HTTP 500; retained 2026-09-09 archive",
+  "response_file": "tencent-api-2026-09-09.json",
+  "migrated_from": "12 week year/2026.09.01-2026.11.30/岗位研究/2026-09-09-深圳AI目标岗位补充/tencent-details.jsonl"
+}

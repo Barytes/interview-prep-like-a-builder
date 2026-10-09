@@ -1,0 +1,4 @@
+interface:
+  display_name: "帮我准备面试"
+  short_description: "根据目标岗位和当前任务，带你开始学习、做项目或继续上次准备"
+  default_prompt: "使用 $prep-me，结合目标岗位和已有学习记录，帮我决定并开始当前最需要的准备。"

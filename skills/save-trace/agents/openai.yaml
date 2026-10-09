@@ -1,0 +1,6 @@
+interface:
+  display_name: "保存本次会话"
+  short_description: "显式调用时归档当前测试会话的对话、工具事件、模型和技能版本"
+  default_prompt: "使用 $save-trace，将当前测试会话归档到对应目标岗位的 runs 目录。"
+policy:
+  allow_implicit_invocation: false

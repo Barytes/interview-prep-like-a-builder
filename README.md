@@ -1,84 +1,94 @@
 # Prepare for Interviews Like a Builder
 
-用 builder mindset 准备面试：理解目标岗位的真实工作，动手参与相关问题，通过证据和反馈形成自己的判断。
+像 builder 一样准备面试：理解目标岗位的工作，学会所需知识，参与完成能演示、能解释、能继续改进的项目。
 
-这是一个 Agent skill，帮助你从“如果我加入这个团队，每天会做什么”出发，逐步理解岗位、学习技术，并积累可以在面试中解释的工作认识与实践证据。
+从 `prep-me` 开始，告诉 Codex 你要准备什么或继续做什么。它选择教学或做项目，沿用学习记录；你对教学方式的评价由 `note-feedback` 单独保存。
 
-## 核心思路
+## 技能入口
 
-把准备过程放进一条真实的工作链条：
+| Skill | 用途 |
+| --- | --- |
+| [prep-me：帮我准备面试](skills/prep-me/SKILL.md) | 选择并衔接当前任务 |
+| [teach-me：教我](skills/teach-me/SKILL.md) | 认识岗位、讲解、练习和补课 |
+| [build-with-me：和我一起做项目](skills/build-with-me/SKILL.md) | 选题、需求、方案、实现、验收和改进 |
+| [track-progress：记录目标和进度](skills/track-progress/SKILL.md) | 读取和保存学习记录，提供共同教学约定 |
+| [note-feedback：记下反馈](skills/note-feedback/SKILL.md) | 保存用户评价，整理全局改进项 |
+| [save-trace：保存本次会话](skills/save-trace/SKILL.md) | 显式调用时归档当前会话及运行信息 |
 
-**公司与行业在发生什么 → 团队要创造什么价值 → 这个岗位负责什么 → 你需要理解和完成什么 → 怎样检验结果 → 下一步怎样调整。**
+技能在当前 Codex 对话中执行。两个教学 skill 可直接使用，公共学习记录通过 `track-progress` 维护。`save-trace` 关闭隐式调用，只有用户明确调用时才执行归档。
 
-学习从目标团队成员的视角开始：工作怎样来到你面前，你会与谁合作，需要做什么判断，交付给谁，负责人关注什么。技术机制随着这些具体需要逐步展开。
-
-教学依照你的理解与反馈推进。可用时间决定范围和取舍；你的实际表达与行动决定下一步讲什么。
-
-## 快速开始
-
-克隆仓库：
+## 使用方法
 
 ```bash
 git clone https://github.com/Barytes/interview-prep-like-a-builder.git
 ```
 
-在能够读取本地文件的 Agent 中，明确指定 [SKILL.md](SKILL.md)，并提供目标岗位与时间约束。例如：
+在 Codex 中打开仓库，读取 [AGENTS.md](AGENTS.md)，例如：
 
 ```text
-请读取 interview-prep-like-a-builder/SKILL.md，按这个 skill 帮我准备面试。
-
-目标公司与岗位：……
-JD：……
+请使用 skills/prep-me/SKILL.md，
+以 tests/roles/Tencent-WorkBuddy-Agent-Harness/岗位JD.md 为目标，
+先帮助我认识加入团队后的工作，再安排学习和项目。
 我的相关经验：……
-准备期限：……
-每周可投入时间：……
-单次学习时长：……
-
-先帮助我理解加入目标团队后会怎样工作，再根据我的理解进入具体案例。
+准备期限与每周投入：……
 ```
 
-把示例路径替换成你的实际克隆路径。已有 JD、目标和学习记录时，直接提供这些材料，继续已有进度。
-
-仓库名为 `interview-prep-like-a-builder`，skill 的内部名称为 `builder-interview`。如果你的 Agent 支持技能安装与发现，按其规则安装后使用这个内部名称调用；直接指定文件也可以作为使用入口。
-
-## 学习怎样推进
-
-1. **建立工作场景。**结合 JD、从业者分享和团队资料，认识任务来源、协作关系、判断与交付。
-2. **形成自己的岗位认识。**你先说明这份工作在做什么、价值在哪里，Agent 根据你的表达补充缺失的连接。
-3. **进入具体问题。**从工作场景中自然产生的需要出发，学习相关技术、工程机制与取舍。
-4. **解释并参与。**选择近期真实进展或开放议题，形成自己的解释、可检查的产物，并寻找实际反馈。
-
-这个过程会随理解和反馈往返调整。学习默认在对话中进行，状态文件负责跨会话接续。
-
-## 怎样判断准备取得了进展
-
-skill 使用两项成功标准：
-
-- **解释最新进展。**你能结合近期证据，解释目标领域的一项进展为什么发生、怎样实现、有哪些取舍，并在条件改变后修订判断。
-- **参与前沿讨论并贡献。**你能理解一个近期真实议题及其分歧，提供可检查、可使用或支持下一步决策的内容，例如失败复现、评估案例、设计分析或实现，并通过实际反馈继续修正。
-
-理解依据你的解释、行动与迁移表现判断。贡献草案、实际参与和外部采用分别记录。对外发帖、私信、提交 PR 或联系他人，需要你的授权。
-
-## 文件与学习状态
+需要保存会话时，明确调用：
 
 ```text
-SKILL.md                教学方法、使用条件与成功标准
-agents/openai.yaml      Agent 界面元数据与默认提示
-references/state.md     学习状态的保存与恢复协议
+请使用 skills/save-trace/SKILL.md，
+将当前测试会话归档到 WorkBuddy 岗位的 runs 目录。
 ```
 
-学习状态按岗位分别保存，包含三个文件：
+环境已发现技能时可用 `$prep-me` 或 `$save-trace`。分发时提供六个 skill、根目录 AGENTS.md 和 CONTEXT.md，记录位置由使用方工作目录约定。
 
-| 文件 | 保存什么 |
-| --- | --- |
-| `MISSION.md` | 岗位与 JD、学习目标、时间投入和教学偏好 |
-| `WORLD_MODEL.md` | 正在形成的工作模型、来源、判断和重要未知 |
-| `PROGRESS.md` | 当前理解、最近的行动证据、待解决问题和下一步 |
+## 三种记录
 
-状态路径遵守使用项目的 `AGENTS.md` 与写入规则。[状态协议](references/state.md) 中的周期目录示例来自原始的 12 Week Year 项目；在其他项目中使用时，按该项目的规则指定学习状态位置。
+| 记录 | 保存什么 | 维护者 |
+| --- | --- | --- |
+| 学习记录 | 准备目标、岗位与项目说明、学习表现与进度 | `track-progress` |
+| 会话记录（trace）及运行信息 | 实际对话、工具事件、模型、harness、技能版本与归档范围 | 显式调用 `save-trace` |
+| 教学反馈（feedback） | 用户评价、偏好、改进建议及处理进展 | `note-feedback` |
 
-## 来源与证据
+学习记录仍保存为 `MISSION.md`、`WORLD_MODEL.md` 和 `PROGRESS.md`。一轮岗位准备可跨多次对话，继续准备时共用记录。
 
-岗位工作认识通过 JD 与从业者的一手资料建立。涉及当前战略和近期进展时，Agent 应查阅最新相关证据，并区分公开行动、推断和教学假设。
+一个测试会话（run）对应一个 Codex 会话 ID，可包含多个任务和技能切换。同一会话重复归档更新相同目录，保留历次归档信息与技能快照；每次保存截至调用时已经落盘的内容。
 
-来源放在相关判断旁。源码阅读、实际运行、测量结果和外部反馈分别记录，让你能够追溯解释的依据，也能够随着新证据调整自己的观点。
+trace 中的评价原话是对话事实，归档不会自动生成教学反馈或评分。全局教学反馈通过事件 ID 引用已有归档；尚未归档时先保存原话与会话出处。
+
+术语见 [CONTEXT.md](CONTEXT.md)，位置见 [记录存放约定](docs/learning-state.md)，字段与导出范围见 [归档说明](skills/save-trace/references/archive.md)。
+
+## 项目结构
+
+```text
+AGENTS.md                     开发与测试职责
+CONTEXT.md                    术语与定义
+skills/                       六个技能及各自参考文件
+tests/
+  README.md                   岗位资料与记录索引
+  save-trace/                 归档脚本测试
+  roles/<岗位>/
+    岗位JD.md
+    sources/                  来源快照
+    learning-state/           学习记录
+    runs/                     显式归档时创建
+      <日期>-<会话ID>/
+        run.md                运行信息阅读视图
+        run.json              运行信息与历次归档
+        trace.jsonl           会话事件
+        conversation.md       对话阅读视图
+        skill-snapshot/       各次归档时的技能快照
+docs/
+  feedback.md                 全局教学反馈与改进项
+  learning-state.md           记录位置
+  handoff.md                  当前交接
+  history/                    历史材料
+```
+
+归档脚本仅使用 Python 3.9+ 标准库，不调用模型 API。验证命令：
+
+```bash
+python3 -m unittest discover -s tests/save-trace -v
+```
+
+三个岗位的资料见 [岗位索引](tests/README.md)，当前优先 WorkBuddy。历史 OpenAI 学习记录用于复盘，原版技能见 [历史归档](docs/history/README.md)。

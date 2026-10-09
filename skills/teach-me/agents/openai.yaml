@@ -1,0 +1,4 @@
+interface:
+  display_name: "教我"
+  short_description: "围绕目标岗位讲清知识、安排练习，根据你的解释与操作决定下一步"
+  default_prompt: "使用 $teach-me，结合目标岗位和已有学习记录，教我当前需要的知识与技能。"

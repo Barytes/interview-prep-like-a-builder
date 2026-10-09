@@ -1,0 +1,4 @@
+interface:
+  display_name: "记下反馈"
+  short_description: "保存用户对教学方式的评价，关联具体依据并跟踪全局改进项的进展"
+  default_prompt: "使用 $note-feedback，记下我对教学方式的评价，整理改进项并关联已有会话记录。"

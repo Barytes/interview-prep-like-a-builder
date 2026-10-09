@@ -1,0 +1,4 @@
+interface:
+  display_name: "和我一起做项目"
+  short_description: "围绕目标岗位和你一起做项目，参与需求、方案、实现、验收和改进"
+  default_prompt: "使用 $build-with-me，结合目标岗位和已有学习记录，和我一起做一个能演示、能解释的项目。"
