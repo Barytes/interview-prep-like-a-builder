@@ -1,4 +1,4 @@
 interface:
   display_name: "记录目标和进度"
-  short_description: "读取和保存岗位准备的目标、学习表现与项目进度，让两个教学技能继续使用同一份记录"
-  default_prompt: "使用 $track-progress，读取我的准备目标和上次进度，保存本次变化并记下下一步。"
+  short_description: "读取岗位准备的目标、进度与教学反馈，保存学习记录，让教学技能沿用同一份记录"
+  default_prompt: "使用 $track-progress，读取我的准备目标、上次进度和教学反馈，保存本次变化并记下下一步。"

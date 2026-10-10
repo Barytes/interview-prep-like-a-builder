@@ -12,7 +12,7 @@
 | [teach-me：教我](skills/teach-me/SKILL.md) | 认识岗位、讲解、练习和补课 |
 | [build-with-me：和我一起做项目](skills/build-with-me/SKILL.md) | 选题、需求、方案、实现、验收和改进 |
 | [track-progress：记录目标和进度](skills/track-progress/SKILL.md) | 读取和保存学习记录，提供共同教学约定 |
-| [note-feedback：记下反馈](skills/note-feedback/SKILL.md) | 保存用户评价，整理全局改进项 |
+| [note-feedback：记下反馈](skills/note-feedback/SKILL.md) | 保存本轮教学反馈，开发时整理公共改进项 |
 | [save-trace：保存本次会话](skills/save-trace/SKILL.md) | 显式调用时归档当前会话及运行信息 |
 
 技能在当前 Codex 对话中执行。两个教学 skill 可直接使用，公共学习记录通过 `track-progress` 维护。`save-trace` 关闭隐式调用，只有用户明确调用时才执行归档。
@@ -50,11 +50,11 @@ git clone https://github.com/Barytes/interview-prep-like-a-builder.git
 | 会话记录（trace）及运行信息 | 实际对话、工具事件、模型、harness、技能版本与归档范围 | 显式调用 `save-trace` |
 | 教学反馈（feedback） | 用户评价、偏好、改进建议及处理进展 | `note-feedback` |
 
-学习记录仍保存为 `MISSION.md`、`WORLD_MODEL.md` 和 `PROGRESS.md`。一轮岗位准备可跨多次对话，继续准备时共用记录。
+学习记录保存为 `MISSION.md`、`WORLD_MODEL.md` 和 `PROGRESS.md`，本轮教学反馈保存在同目录的 `FEEDBACK.md`。一轮岗位准备可跨多次对话，继续准备时一并读取，并根据反馈调整教学。skill 开发的公共改进项在 `docs/feedback.md` 引用具体反馈。
 
 一个测试会话（run）对应一个 Codex 会话 ID，可包含多个任务和技能切换。同一会话重复归档更新相同目录，保留历次归档信息与技能快照；每次保存截至调用时已经落盘的内容。
 
-trace 中的评价原话是对话事实，归档不会自动生成教学反馈或评分。全局教学反馈通过事件 ID 引用已有归档；尚未归档时先保存原话与会话出处。
+trace 中的评价原话是对话事实，归档不会自动生成教学反馈或评分。教学反馈通过事件 ID 引用已有归档；尚未归档时先保存原话与会话出处。
 
 术语见 [CONTEXT.md](CONTEXT.md)，位置见 [记录存放约定](docs/learning-state.md)，字段与导出范围见 [归档说明](skills/save-trace/references/archive.md)。
 
@@ -70,7 +70,7 @@ tests/
   roles/<岗位>/
     岗位JD.md
     sources/                  来源快照
-    learning-state/           学习记录
+    learning-state/           各轮学习记录与 FEEDBACK.md
     runs/                     显式归档时创建
       <日期>-<会话ID>/
         run.md                运行信息阅读视图
@@ -79,7 +79,7 @@ tests/
         conversation.md       对话阅读视图
         skill-snapshot/       各次归档时的技能快照
 docs/
-  feedback.md                 全局教学反馈与改进项
+  feedback.md                 skill 开发的公共改进项
   learning-state.md           记录位置
   handoff.md                  当前交接
   history/                    历史材料

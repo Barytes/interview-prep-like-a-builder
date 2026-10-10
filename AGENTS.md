@@ -14,9 +14,9 @@
 | `skills/prep-me/` | 统一入口，选择并衔接当前任务 |
 | `skills/teach-me/`、`skills/build-with-me/` | 教学、做项目及教学判断 |
 | `skills/track-progress/` | 学习记录、共同教学约定与学习记录格式 |
-| `skills/note-feedback/` | 教学反馈及全局改进项 |
+| `skills/note-feedback/` | 本轮教学反馈及公共改进项 |
 | `skills/save-trace/` | 显式归档会话记录与运行信息，包含导出脚本 |
-| `docs/feedback.md` | 全局教学反馈；开发时读取相关改进项 |
+| `docs/feedback.md` | skill 开发的公共改进项；引用各轮教学反馈 |
 | `docs/learning-state.md` | 各类记录的存放位置 |
 | `tests/roles/` | 岗位资料、学习记录和显式归档的 runs；索引见 `tests/README.md` |
 | `tests/save-trace/` | 归档脚本测试，使用临时目录与模拟日志 |
@@ -29,5 +29,7 @@
 帮助用户像 builder 一样准备面试：认识岗位、学会知识、参与完成能演示且能解释的项目。
 
 默认使用 `prep-me`，也可直接使用两个教学 skill。`track-progress` 维护学习记录，`note-feedback` 整理用户评价，`save-trace` 仅在用户显式调用时归档会话。
+
+教学反馈与学习记录放在同一轮准备的目录，继续准备时一并读取，具体文件与存放约定见下方链接。
 
 trace 保存发生过的对话与工具事件，feedback 保存用户评价及改进进展，二者通过事件引用关联。其他 skill 的调用和教学反馈记录不触发会话归档。位置见 [存放约定](docs/learning-state.md)。

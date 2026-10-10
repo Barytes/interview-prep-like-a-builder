@@ -1,12 +1,12 @@
-# 当前交接：显式归档与教学反馈
+# 当前交接：学习记录、教学反馈与显式归档
 
-日期：2026-10-09（Asia/Shanghai）。项目：`interview-prep-like-a-builder`。工作分支：`codex/split-interview-prep-skills`。
+日期：2026-10-10（Asia/Shanghai）。项目：`interview-prep-like-a-builder`。工作分支：`codex/split-interview-prep-skills`。
 
 ## 当前组织
 
 [prep-me](../skills/prep-me/SKILL.md) 选择任务；两个教学 skill 执行教学或做项目；[track-progress](../skills/track-progress/SKILL.md) 保存学习记录。
 
-[note-feedback](../skills/note-feedback/SKILL.md) 仅整理用户评价与改进项。[save-trace](../skills/save-trace/SKILL.md) 仅在用户显式调用时归档当前 Codex 会话，保存运行信息、对话及工具事件，生成阅读视图。二者通过事件引用关联，不互相触发。
+[note-feedback](../skills/note-feedback/SKILL.md) 将本轮教学评价保存在学习记录目录的 `FEEDBACK.md`，继续准备时由 `track-progress` 一并读取并传给教学 skill。公共改进项引用具体反馈。[save-trace](../skills/save-trace/SKILL.md) 仅在用户显式调用时归档当前 Codex 会话，保存运行信息、对话及工具事件，生成阅读视图。反馈与归档通过事件引用关联，不互相触发。
 
 [CONTEXT.md](../CONTEXT.md) 定义测试会话（run）、会话记录（trace）、归档和运行信息。此前按任务维护 trials 的方案已由按会话 ID 归档 runs 取代，此前未生成实际 trials 文件。
 
@@ -14,7 +14,7 @@
 
 先推进 WorkBuddy 岗位准备。用户对 personal agent 感兴趣，具体项目尚未决定，正式开始时结合准备期限和投入确定范围。
 
-[全局教学反馈](feedback.md) 保存开发要求及改进项，实际教学效果由用户后续试用反馈确认。需要留存测试会话时，由用户显式调用 save-trace；本次开发对话不自动归档到岗位。
+[公共改进项](feedback.md) 保存 skill 开发要求及处理进展，引用各轮具体反馈；WorkBuddy 的 F003、F004 原话与本轮处理历史已迁至 [FEEDBACK.md](../tests/roles/Tencent-WorkBuddy-Agent-Harness/learning-state/2026-10-09/FEEDBACK.md)。实际教学效果由用户后续试用反馈确认。需要留存测试会话时，由用户显式调用 save-trace；本次开发对话不自动归档到岗位。
 
 ## 迁移与来源
 
@@ -24,6 +24,8 @@ WorkBuddy JD 于 2026-10-09 从腾讯官方接口取得，OpenAI JD 同日从官
 
 ## 验证
 
-归档脚本的 8 项测试通过，覆盖逐轮模型、工具事件、反馈文件不变、重复归档、未提交文件快照、日志尾部写入及旧记录保护。当前会话日志另做只读解析检查，未在岗位目录中生成 run。
+2026-10-09，归档脚本的 8 项测试通过，覆盖逐轮模型、工具事件、反馈文件不变、重复归档、未提交文件快照、日志尾部写入及旧记录保护。当时会话日志另做只读解析检查，未在岗位目录中生成 run。
 
-六个 skill 均通过格式验证；70 个本地 Markdown 链接及锚点有效。save-trace 的隐式调用已关闭，其余技能保持原调用方式；教学效果仍待真实试用。
+2026-10-09，六个 skill 均通过格式验证；70 个本地 Markdown 链接及锚点有效。save-trace 的隐式调用已关闭，其余技能保持原调用方式。
+
+2026-10-10，本次修改的三个 skill 及 UI 元数据通过格式检查；涉及文件的 59 个本地 Markdown 链接及锚点有效，F003、F004 迁移内容与迁移前完全一致，`git diff --check` 通过。新约定的实际使用效果待试用，见公共改进项 F005。

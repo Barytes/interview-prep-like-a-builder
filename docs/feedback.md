@@ -1,6 +1,6 @@
-# 教学反馈
+# skill 开发的公共改进项
 
-集中保存改进项，关联各岗位的实际试用。术语见 [CONTEXT.md](../CONTEXT.md)，记录流程与格式见 [note-feedback](../skills/note-feedback/SKILL.md)。
+保存 skill 开发要求与公共改进项；来自实际试用的评价原话及本轮处理历史保存在各轮 `FEEDBACK.md`，此处通过链接引用。术语见 [CONTEXT.md](../CONTEXT.md)，记录流程与格式见 [note-feedback](../skills/note-feedback/SKILL.md)。
 
 ## F001 精简提示词并统一用语
 
@@ -19,3 +19,22 @@
 - **处理进展**：待试用。
 - **实际改动**：增加显式调用的 `save-trace`，移除自动创建试用记录的流程，`note-feedback` 不归档会话。当前工作区改动尚未提交。
 - **后续反馈**：尚未取得实际试用反馈。
+
+## F003 已有基础时先诊断再安排教学
+
+- **依据**：[WorkBuddy 本轮反馈 F003](../tests/roles/Tencent-WorkBuddy-Agent-Harness/learning-state/2026-10-09/FEEDBACK.md#f003-已有基础时先诊断再安排教学)，原话与本轮处理历史保留在该条目。
+- **处理进展**：待处理；是否将本轮安排转为通用 skill 规则，待后续试用反馈再决定。
+
+## F004 先完整解释具体系统，再逐步扩展最小实现
+
+- **依据**：[WorkBuddy 本轮反馈 F004](../tests/roles/Tencent-WorkBuddy-Agent-Harness/learning-state/2026-10-09/FEEDBACK.md#f004-先完整解释具体系统再逐步扩展最小实现)，原话与本轮处理历史保留在该条目。
+- **处理进展**：待处理；是否将本轮讲解要求转为通用 skill 规则，待后续试用反馈再决定。
+
+## F005 教学反馈与本轮学习记录放在一起
+
+- **适用情境与技能**：`track-progress`、`note-feedback`、`prep-me` 及共同存放约定。
+- **用户评价与依据**：开发讨论，2026-10-10，本次 Codex 对话。用户原话：“我觉得feedback也可以设定放在同一个位置，作为这个skill的运行状态。”随后明确要求：“ok。请你这样修改”。
+- **准备尝试**：每轮教学评价保存在学习记录目录的 `FEEDBACK.md`，继续准备时一并读取并用于教学安排；公共改进项引用具体反馈。
+- **处理进展**：待试用。
+- **实际改动**：2026-10-10，更新技能与存放约定；将 WorkBuddy 的 F003、F004 完整反馈迁入本轮 `FEEDBACK.md`，修正进度中的引用；公共文件保留改进项及依据链接。变更随本次提交保存。
+- **后续反馈**：尚未取得调整后的实际使用反馈。
